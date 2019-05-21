@@ -46,7 +46,57 @@ namespace _15
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
+            Button bclick =(Button)sender;
+            int n = (int)Convert.ToInt64(bclick.Tag.ToString()); //save number button
+            n--;
+            int y = n / 4;
+            int x = n- y* 4;
+            int yt, yb;
+            int xl, xr;
+            yt = y - 1;
+            yb = y + 1;
+            xl = x - 1;
+            xr = x + 1;
+            if (xr<4)
+            {
+                int nr = y * 4 + xr;
+                if (!B[nr].Visibility)
+                {
+                    B[nr].Visibility = true;
+                    B[n].Visibility = false;
+                    B[nr].Content = B[n].Content;
+                }
+                if (xl >= 0)
+                {
+                    int nl = y * 4 + xl;
+                    if (!B[nl].Visibility)
+                    {
+                        B[nl].Visibility = true;
+                        B[n].Visibility = false;
+                        B[nl].Content = B[n].Content;
+                    }
+                }
+                if (yt >= 0)
+                {
+                    int nt = yt * 4 + x;
+                    if (!B[nt].Visibility)
+                    {
+                        B[nt].Visibility = true;
+                        B[n].Visibility = false;
+                        B[nt].Content = B[n].Content;
+                    }
+                }
+                if (yb < 4)
+                {
+                    int nt = yb * 4 + x;
+                    if (!B[nb].Visibility)
+                    {
+                        B[nb].Visibility = true;
+                        B[n].Visibility = false;
+                        B[nb].Content = B[n].Content;
+                    }
+                }
 
-        }
+            }
     }
 }
