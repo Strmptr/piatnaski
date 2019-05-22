@@ -14,21 +14,21 @@
             <ColumnDefinition Width="44*"/>
         </Grid.ColumnDefinitions>
         <Button x:Name="button1" Content="1" HorizontalAlignment="Left" Height="100" Margin="5,48,0,0" VerticalAlignment="Top" Width="100" Grid.Column="2" FontFamily="Times New Roman" FontSize="36" Click="button1_Click" Tag="1"/>
-        <Button x:Name="button2" Content="2" HorizontalAlignment="Left" Height="100" Margin="110,48,0,0" VerticalAlignment="Top" Width="100" Grid.Column="2" FontFamily="Times New Roman" FontSize="36" Tag="2"/>
-        <Button x:Name="button3" Content="3" HorizontalAlignment="Left" Height="100" Margin="215,48,0,0" VerticalAlignment="Top" Width="100" Grid.Column="2" FontFamily="Times New Roman" FontSize="36" Tag="3"/>
-        <Button x:Name="button5" Content="5" HorizontalAlignment="Left" Height="100" Margin="5,153,0,0" VerticalAlignment="Top" Width="100" Grid.Column="2" FontFamily="Times New Roman" FontSize="36" Tag="5"/>
-        <Button x:Name="button9" Content="9" HorizontalAlignment="Left" Height="100" Margin="5,258,0,0" VerticalAlignment="Top" Width="100" Grid.Column="2" FontFamily="Times New Roman" FontSize="36" Tag="9"/>
-        <Button x:Name="button6" Content="6" HorizontalAlignment="Left" Height="100" Margin="110,153,0,0" VerticalAlignment="Top" Width="100" Grid.Column="2" FontFamily="Times New Roman" FontSize="36" Tag="6"/>
-        <Button x:Name="button7" Content="7" HorizontalAlignment="Left" Height="100" Margin="215,153,0,0" VerticalAlignment="Top" Width="100" Grid.Column="2" FontFamily="Times New Roman" FontSize="36" Tag="7"/>
-        <Button x:Name="button10" Content="10" HorizontalAlignment="Left" Height="100" Margin="110,258,0,0" VerticalAlignment="Top" Width="100" Grid.Column="2" FontFamily="Times New Roman" FontSize="36" Tag="10"/>
-        <Button x:Name="button11" Content="11" HorizontalAlignment="Left" Height="100" Margin="215,258,0,0" VerticalAlignment="Top" Width="100" Grid.Column="2" FontFamily="Times New Roman" FontSize="36" Tag="11"/>
-        <Button x:Name="button4" Content="4" HorizontalAlignment="Left" Height="100" Margin="320,48,0,0" VerticalAlignment="Top" Width="100" Grid.Column="2" FontFamily="Times New Roman" FontSize="36" Tag="4"/>
-        <Button x:Name="button8" Content="8" HorizontalAlignment="Left" Height="100" Margin="320,153,0,0" VerticalAlignment="Top" Width="100" Grid.Column="2" FontFamily="Times New Roman" FontSize="36" Tag="8"/>
-        <Button x:Name="button12" Content="12" HorizontalAlignment="Left" Height="100" Margin="320,258,0,0" VerticalAlignment="Top" Width="100" Grid.Column="2" FontFamily="Times New Roman" FontSize="36" Tag="12"/>
-        <Button x:Name="button13" Content="13" HorizontalAlignment="Left" Height="100" Margin="5,363,0,0" VerticalAlignment="Top" Width="100" Grid.Column="2" FontFamily="Times New Roman" FontSize="36" Tag="13"/>
-        <Button x:Name="button14" Content="14" HorizontalAlignment="Left" Height="100" Margin="110,363,0,0" VerticalAlignment="Top" Width="100" Grid.Column="2" FontFamily="Times New Roman" FontSize="36" Tag="14"/>
-        <Button x:Name="button15" Content="15" HorizontalAlignment="Left" Height="100" Margin="215,363,0,0" VerticalAlignment="Top" Width="100" Grid.Column="2" FontFamily="Times New Roman" FontSize="36" Tag="15"/>
-        <Button x:Name="button16" Content="16" HorizontalAlignment="Left" Height="100" Margin="320,363,0,0" VerticalAlignment="Top" Width="100" Grid.Column="2" FontFamily="Times New Roman" FontSize="36" ScrollViewer.VerticalScrollBarVisibility="Disabled" IsHitTestVisible="True" Tag="16"/>
+        <Button x:Name="button2" Content="2" HorizontalAlignment="Left" Height="100" Margin="110,48,0,0" VerticalAlignment="Top" Width="100" Grid.Column="2" FontFamily="Times New Roman" FontSize="36" Tag="2" Click="button1_Click"/>
+        <Button x:Name="button3" Content="3" HorizontalAlignment="Left" Height="100" Margin="215,48,0,0" VerticalAlignment="Top" Width="100" Grid.Column="2" FontFamily="Times New Roman" FontSize="36" Tag="3" Click="button1_Click"/>
+        <Button x:Name="button5" Content="5" HorizontalAlignment="Left" Height="100" Margin="5,153,0,0" VerticalAlignment="Top" Width="100" Grid.Column="2" FontFamily="Times New Roman" FontSize="36" Tag="5" Click="button1_Click"/>
+        <Button x:Name="button9" Content="9" HorizontalAlignment="Left" Height="100" Margin="5,258,0,0" VerticalAlignment="Top" Width="100" Grid.Column="2" FontFamily="Times New Roman" FontSize="36" Tag="9" Click="button1_Click"/>
+        <Button x:Name="button6" Content="6" HorizontalAlignment="Left" Height="100" Margin="110,153,0,0" VerticalAlignment="Top" Width="100" Grid.Column="2" FontFamily="Times New Roman" FontSize="36" Tag="6" Click="button1_Click"/>
+        <Button x:Name="button7" Content="7" HorizontalAlignment="Left" Height="100" Margin="215,153,0,0" VerticalAlignment="Top" Width="100" Grid.Column="2" FontFamily="Times New Roman" FontSize="36" Tag="7" Click="button1_Click"/>
+        <Button x:Name="button10" Content="10" HorizontalAlignment="Left" Height="100" Margin="110,258,0,0" VerticalAlignment="Top" Width="100" Grid.Column="2" FontFamily="Times New Roman" FontSize="36" Tag="10" Click="button1_Click"/>
+        <Button x:Name="button11" Content="11" HorizontalAlignment="Left" Height="100" Margin="215,258,0,0" VerticalAlignment="Top" Width="100" Grid.Column="2" FontFamily="Times New Roman" FontSize="36" Tag="11" Click="button1_Click"/>
+        <Button x:Name="button4" Content="4" HorizontalAlignment="Left" Height="100" Margin="320,48,0,0" VerticalAlignment="Top" Width="100" Grid.Column="2" FontFamily="Times New Roman" FontSize="36" Tag="4" Click="button1_Click"/>
+        <Button x:Name="button8" Content="8" HorizontalAlignment="Left" Height="100" Margin="320,153,0,0" VerticalAlignment="Top" Width="100" Grid.Column="2" FontFamily="Times New Roman" FontSize="36" Tag="8" Click="button1_Click"/>
+        <Button x:Name="button12" Content="12" HorizontalAlignment="Left" Height="100" Margin="320,258,0,0" VerticalAlignment="Top" Width="100" Grid.Column="2" FontFamily="Times New Roman" FontSize="36" Tag="12" Click="button1_Click"/>
+        <Button x:Name="button13" Content="13" HorizontalAlignment="Left" Height="100" Margin="5,363,0,0" VerticalAlignment="Top" Width="100" Grid.Column="2" FontFamily="Times New Roman" FontSize="36" Tag="13" Click="button1_Click"/>
+        <Button x:Name="button14" Content="14" HorizontalAlignment="Left" Height="100" Margin="110,363,0,0" VerticalAlignment="Top" Width="100" Grid.Column="2" FontFamily="Times New Roman" FontSize="36" Tag="14" Click="button1_Click"/>
+        <Button x:Name="button15" Content="15" HorizontalAlignment="Left" Height="100" Margin="215,363,0,0" VerticalAlignment="Top" Width="100" Grid.Column="2" FontFamily="Times New Roman" FontSize="36" Tag="15" Click="button1_Click"/>
+        <Button x:Name="button16" Content="16" HorizontalAlignment="Left" Height="100" Margin="320,363,0,0" VerticalAlignment="Top" Width="100" Grid.Column="2" FontFamily="Times New Roman" FontSize="36" ScrollViewer.VerticalScrollBarVisibility="Disabled" IsHitTestVisible="True" Tag="16" Visibility="Hidden" Click="button1_Click"/>
 
     </Grid>
 </Window>
