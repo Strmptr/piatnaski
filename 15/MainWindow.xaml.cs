@@ -21,8 +21,15 @@ namespace _15
     /// </summary>
     public partial class MainWindow : Window
     {
+        static Random rand = new Random();
         Button[] B;
+        int yt, yb;
+        int xl, xr;
+        
+
+
         public MainWindow()
+
         {
             InitializeComponent();
             B = new Button[16];
@@ -51,8 +58,7 @@ namespace _15
             n--;
             int y = n / 4;
             int x = n - y * 4;
-            int yt, yb;
-            int xl, xr;
+            
             yt = y - 1;
             yb = y + 1;
             xl = x - 1;
@@ -61,7 +67,7 @@ namespace _15
             if (xr < 4)
             {
                 int nr = y * 4 + xr;
-                if (B[nr].Visibility == Visibility.Visible)
+                if (B[nr].Visibility == Visibility.Hidden)//если кнопка не видима то меняемся
                 {
                     B[nr].Visibility = Visibility.Visible;
                     B[n].Visibility = Visibility.Hidden;
@@ -70,7 +76,7 @@ namespace _15
                 if (xl >= 0)
                 {
                     int nl = y * 4 + xl;
-                    if (B[nl].Visibility == Visibility.Visible)
+                    if (B[nl].Visibility == Visibility.Hidden)
                     {
                         B[nl].Visibility = Visibility.Visible;
                         B[n].Visibility = Visibility.Hidden;
@@ -80,7 +86,7 @@ namespace _15
                 if (yt >= 0)
                 {
                     int nt = yt * 4 + x;
-                    if (B[nt].Visibility == Visibility.Visible)
+                    if (B[nt].Visibility == Visibility.Hidden)
                     {
                         B[nt].Visibility = Visibility.Visible;
                         B[n].Visibility = Visibility.Hidden;
@@ -90,7 +96,7 @@ namespace _15
                 if (yb < 4)
                 {
                     int nb = yb * 4 + x;
-                    if (B[nb].Visibility == Visibility.Visible)
+                    if (B[nb].Visibility == Visibility.Hidden)
                     {
                         B[nb].Visibility = Visibility.Visible;
                         B[n].Visibility = Visibility.Hidden;
@@ -99,6 +105,8 @@ namespace _15
                 }
 
             }
+            
         }
+        
     }
 }
