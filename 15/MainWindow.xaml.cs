@@ -25,7 +25,7 @@ namespace _15
         Button[] B;
         int yt, yb;
         int xl, xr;
-        
+       
 
 
         public MainWindow()
@@ -49,6 +49,22 @@ namespace _15
             B[13] = button14;
             B[14] = button15;
             B[15] = button16;
+
+            for (int i = 0; i < 100; i++)
+            {
+                int e1 = rand.Next(16);
+                int e2 = rand.Next(16);
+
+                Button tmp = B[e1];
+                B[e1] = B[e2];
+                B[e2] = tmp;
+            }
+
+            for (int i = 0; i < 16; i++)
+            {
+                g.Children[i] = B[i];
+            }
+
         }
 
         private void button1_Click(object sender, RoutedEventArgs e)
