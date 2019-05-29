@@ -9,6 +9,7 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
@@ -22,10 +23,10 @@ namespace Shapes15
     {
         Random rng = new Random();
 
-        const int W = 64;
-        const int H = 64;
+         const int W = 64;
+          const int H = 64;
 
-        const int C = 4;
+         const int C = 4;
         const int R = 4;
         
         public class CCell
@@ -187,4 +188,6 @@ namespace Shapes15
         
         }
     }
+   
 }
+
