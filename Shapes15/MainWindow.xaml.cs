@@ -14,7 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Shapes15
-{
+{     //https://docs.microsoft.com/ru-ru/dotnet/framework/wpf/graphics-multimedia/how-to-animate-a-rectangle
     /// <summary>
     /// Логика взаимодействия для MainWindow.xaml
     /// </summary>
