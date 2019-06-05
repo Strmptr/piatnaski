@@ -14,6 +14,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+ 
+
 namespace Shapes15
 {     //https://docs.microsoft.com/ru-ru/dotnet/framework/wpf/graphics-multimedia/how-to-animate-a-rectangle
     /// <summary>
@@ -23,20 +25,21 @@ namespace Shapes15
     {
         Random rng = new Random();
 
-         const int W = 64;
-          const int H = 64;
+        const int W = 64;
+        const int H = 64;
 
-         const int C = 4;
+        const int C = 4;
         const int R = 4;
-        
+
         public class CCell
         {
-            public Rectangle cell;
+
+
             //кисть для заполнения прямоугольника фрагментом изображения
             ImageBrush ib;
-            public int i; 
+            public int i;
             public int j;
-
+            public Rectangle cell;
             int[,] link;
 
             public CCell(Canvas scene)
@@ -52,11 +55,11 @@ namespace Shapes15
                 cell.Height = H;
                 cell.Width = W;
                 cell.Margin = new Thickness(0, 0, 0, 0);
-                
+
                 //кисть для заполнения прямоугольника фрагментом изображения
                 ib = new ImageBrush();
                 //настройки, позиция изображения будет указана как координаты левого верхнего угла
-                
+
                 //изображение будет выведено без растяжения/сжатия
                 ib.AlignmentX = AlignmentX.Left;
                 ib.AlignmentY = AlignmentY.Top;
@@ -78,66 +81,66 @@ namespace Shapes15
 
             public void Cell_MouseDown(object sender, MouseButtonEventArgs e)
             {
+                predv();
+                //    if (i + 1 < C)
+                //    {
+                //        if (link[i + 1, j] == 0)
+                //        {
+                //            link[i + 1, j] = 1;
+                //            link[i, j] = 0;
+                //            i++;
+                //            cell.RenderTransform = new TranslateTransform(i * W, j * H);
+                //            return;
+                //        }
+                //    }
 
-                if (i + 1 < C)
+                //    if (j + 1 < R)
+                //    {
+                //        if (link[i, j + 1] == 0)
+                //        {
+                //            link[i, j + 1] = 1;
+                //            link[i, j] = 0;
+                //            j++;
+                //            cell.RenderTransform = new TranslateTransform(i * W, j * H);
+                //            return;
+                //        }
+                //    }
+
+                //    if (i - 1 >= 0)
+                //    {
+                //        if (link[i - 1, j] == 0)
+                //        {
+                //            link[i - 1, j] = 1;
+                //            link[i, j] = 0;
+                //            i--;
+                //            cell.RenderTransform = new TranslateTransform(i * W, j * H);
+                //            return;
+                //        }
+                //    }
+
+                //    if (j - 1 >= 0)
+                //    {
+                //        if (link[i, j - 1] == 0)
+                //        {
+                //            link[i, j - 1] = 1;
+                //            link[i, j] = 0;
+                //            j--;
+                //            cell.RenderTransform = new TranslateTransform(i * W, j * H);
+                //            return;
+                //        }
+                //    }
+                }
+
+                public void setPos(int i, int j, ref int[,] l)
                 {
-                    if (link[i + 1, j] == 0)
-                    {
-                        link[i + 1, j] = 1;
-                        link[i, j] = 0;
-                        i++;
-                        cell.RenderTransform = new TranslateTransform(i * W, j * H);
-                        return;
-                    }
+                    cell.RenderTransform = new TranslateTransform(i * W, j * H);
+                    ib.Viewbox = new Rect(i * W, j * H, i * W + W, j * H + H);
+
+                    this.i = i;
+                    this.j = j;
+
+                    link = l;
                 }
-
-                if (j + 1 < R)
-                { 
-                    if (link[i, j+1] == 0)
-                    {
-                        link[i, j+1] = 1;
-                        link[i, j] = 0;
-                        j++;
-                        cell.RenderTransform = new TranslateTransform(i * W, j * H);
-                        return;
-                    }
-                }
-
-                if (i - 1 >= 0)
-                {
-                    if (link[i - 1, j] == 0)
-                    {
-                        link[i - 1, j] = 1;
-                        link[i, j] = 0;
-                        i--;
-                        cell.RenderTransform = new TranslateTransform(i * W, j * H);
-                        return;
-                    }
-                }
-
-                if (j - 1 >= 0)
-                {
-                    if (link[i, j - 1] == 0)
-                    {
-                        link[i, j-1] = 1;
-                        link[i, j] = 0;
-                        j--;
-                        cell.RenderTransform = new TranslateTransform(i * W, j * H);
-                        return;
-                    }
-                }
-            }
-
-            public void setPos(int i, int j, ref int[,] l)
-            {
-                cell.RenderTransform = new TranslateTransform(i*W, j*H);
-                ib.Viewbox = new Rect(i*W, j*H, i*W+W, j*H+H);
-
-                this.i = i;
-                this.j = j;
-
-                link = l;
-            }
         }
 
         int[,] m = new int[C, R];
@@ -149,45 +152,48 @@ namespace Shapes15
             InitializeComponent();
 
         }
-       
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            for (int i = 0; i < C; i++)
-                for (int j = 0; j < R; j++)
-                {
-                    m[i, j] = 1;
-                }
-            m[C - 1, R - 1] = 0;
+            //for (int i = 0; i < C; i++)
+            //    for (int j = 0; j < R; j++)
+            //    {
+            //        m[i, j] = 1;
+            //    }
+            //m[C - 1, R - 1] = 0;
 
-            for (int i = 0; i < C; i++)
-                for (int j = 0; j < R; j++)
-                {
-                    if ((i == C - 1) && (j == R - 1))
-                    {
-                        cells[i, j] = null;
-                    }
-                    else
-                    {
-                        cells[i, j] = new CCell(scene);
-                        cells[i, j].setPos(i, j, ref m);
-                    }
-                }
+            //for (int i = 0; i < C; i++)
+            //    for (int j = 0; j < R; j++)
+            //    {
+            //        if ((i == C - 1) && (j == R - 1))
+            //        {
+            //            cells[i, j] = null;
+            //        }
+            //        else
+            //        {
+            //            cells[i, j] = new CCell(scene);
+            //            cells[i, j].setPos(i, j, ref m);
+            //        }
+            //    }
 
-            MouseButtonEventArgs ev = new MouseButtonEventArgs(Mouse.PrimaryDevice, 0, MouseButton.Left);
-            for (int i = 0; i < 100; i++)
-            {
-                int a = rng.Next(4);
-                int b = rng.Next(4);
+            //MouseButtonEventArgs ev = new MouseButtonEventArgs(Mouse.PrimaryDevice, 0, MouseButton.Left);
+            //for (int i = 0; i < 100; i++)
+            //{
+            //    int a = rng.Next(4);
+            //    int b = rng.Next(4);
 
-                if (cells[a, b] != null)
-                {
+            //    if (cells[a, b] != null)
+            //    {
 
-                    cells[a, b].Cell_MouseDown(cells[a,b].cell, ev);
-                }
-            }
-        
+            //        cells[a, b].Cell_MouseDown(cells[a, b].cell, ev);
+            //    }
+            //}
+
         }
+
+
+
     }
-   
+
 }
 
